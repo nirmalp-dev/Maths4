@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nirma.math4.Bisection">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/l1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bracketing a = "
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/a"
+            android:fontFamily="serif-monospace"
+            android:hint=" 1 " />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  b = "
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/b"
+            android:textSize="20sp"
+            android:fontFamily="serif-monospace"
+            android:hint=" 2 " />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/l2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stopping Criterian"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no. of Irteration "
+            android:fontFamily="@font/roboto_slab"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/n"
+            android:text=""
+            android:fontFamily="serif-monospace"
+            android:textSize="20sp"
+            android:hint=" 5 " />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:id="@+id/l4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accuracy "
+            android:fontFamily="@font/roboto_slab"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/acc"
+            android:text=""
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:textSize="20sp"
+            android:hint=" 0.0001 " />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:maxLines="1"
+            android:scrollbars="horizontal"
+            android:inputType="text"
+            android:textSize="25sp"
+            android:layout_alignBottom="@+id/accuracy"
+            android:hint="x^3 - 3*x + 5"/>
+    </LinearLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ans"
+        android:layout_marginTop="210dp"
+        android:hint="Ans"
+        android:fontFamily="casual"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/solve"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Solve"
+        android:fontFamily="@font/roboto_slab"
+        android:textSize="20sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/reset"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Reset"
+        android:fontFamily="@font/roboto_slab"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
