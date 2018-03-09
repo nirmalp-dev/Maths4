@@ -5,20 +5,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import org.apache.commons.math3.analysis.UnivariateFunction;
 import org.apache.commons.math3.analysis.solvers.BisectionSolver;
+import org.apache.commons.math3.analysis.solvers.RegulaFalsiSolver;
 import org.mariuszgromada.math.mxparser.Expression;
 import org.mariuszgromada.math.mxparser.Function;
 
-public class Bisection extends AppCompatActivity {
+public class False_Position extends AppCompatActivity {
     Button Solve,Reset;
-    EditText eq,ans,a,b,acc,no;
+    EditText eq,ans,a,b,acc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bisection);
+        setContentView(R.layout.activity_false__position);
         Solve=(Button)findViewById(R.id.solve);
         Reset=(Button)findViewById(R.id.reset);
         a=(EditText)findViewById(R.id.a);
@@ -32,18 +33,24 @@ public class Bisection extends AppCompatActivity {
 
                 // Start NewActivity.class
                 String inString;
-                double min=1,max=2,accuracy=0.0001;
-                int itr=1000;
-                inString=eq.getText().toString();
-                if(!a.getText().toString().isEmpty())
-                    min=Double.valueOf(a.getText().toString());
-                if(!b.getText().toString().isEmpty())
-                    max=Double.valueOf(b.getText().toString());
-                if(!acc.getText().toString().isEmpty())
-                    accuracy=Double.valueOf(acc.getText().toString());
-                final Function f=new Function("f(x)= " + inString);
-                try {
-                    BisectionSolver Solver = new BisectionSolver(accuracy);
+                double min = 1, max = 2, accuracy = 0.001;
+                int itr = 1000;
+                inString = eq.getText().toString();
+                if (a.getText().toString() != "")
+                    min = Double.valueOf(a.getText().toString());
+                if (b.getText().toString() != "")
+                    max = Double.valueOf(b.getText().toString());
+                if (acc.getText().toString() != "")
+                    accuracy = Double.valueOf(acc.getText().toString());
+
+                if (inString.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Enter Equation", Toast.LENGTH_SHORT).show();
+                    eq.setFocusable(true);
+                }
+                else {
+
+                    final Function f = new Function("f(x)= " + inString);
+                    RegulaFalsiSolver Solver = new RegulaFalsiSolver(accuracy);
 
                     UnivariateFunction fUnivariateFunction = new UnivariateFunction() {
                         @Override
@@ -56,12 +63,8 @@ public class Bisection extends AppCompatActivity {
                     double d = Solver.solve(itr, fUnivariateFunction, min, max);
                     ans.setText(String.valueOf(d));
                 }
-                catch (Exception e)
-                {
-                    ans.setText(e.getStackTrace().toString());
-                }
             }
-        });
+            });
         Reset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
@@ -73,6 +76,7 @@ public class Bisection extends AppCompatActivity {
                 ans.setText("");
             }
         });
+
 
     }
 }

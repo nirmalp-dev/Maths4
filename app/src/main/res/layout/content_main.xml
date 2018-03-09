@@ -12,12 +12,13 @@
         android:id="@+id/mathtv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="55dp"
         android:gravity="center"
+        android:textStyle="bold"
         android:shadowColor="@color/colorPrimary"
-        android:text="Math 4"
+        android:text="Numerical &amp; Statistical Analysis"
         android:fontFamily="casual"
-        android:textSize="50sp"
+        android:textSize="30sp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -39,7 +40,8 @@
             android:layout_margin="10dp"
             android:textSize="20sp"
             android:height="125dp"
-            android:fontFamily="@font/roboto_slab"
+            android:background="@drawable/button_numerical"
+            android:fontFamily="@font/roboto"
             android:text=" Numerical "
             android:textStyle="bold" />
 
@@ -49,9 +51,10 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_gravity="center"
+            android:background="@drawable/button_numerical"
             android:layout_margin="10dp"
             android:height="125dp"
-            android:fontFamily="@font/roboto_slab"
+            android:fontFamily="@font/roboto"
             android:text="statistical"
 
             android:textStyle="bold" />

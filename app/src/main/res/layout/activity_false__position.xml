@@ -4,21 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F6"
-    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-    tools:context="com.example.nirma.math4.Bisection">
-
+    android:theme="@style/Theme.Design.Light.NoActionBar"
+    tools:context="com.example.nirma.math4.False_Position">
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/title_bisectio"
         android:fontFamily="@font/roboto_mono_light"
-        android:text="@string/bisection_method"
+        android:text="False Position"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp" />
-        <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
@@ -67,7 +65,6 @@
             android:textSize="20sp"/>
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -134,13 +131,13 @@
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
-        android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@drawable/button_bisection"
         android:fontFamily="@font/roboto"
         android:text="Reset"
+        android:layout_margin="10dp"
         android:textSize="20sp" />
 
 </RelativeLayout>
