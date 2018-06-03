@@ -1,4 +1,4 @@
-# Maths4
+# Maths4 https://play.google.com/store/apps/details?id=com.nims972.nirmal.math4
 This is a Maths app that performs varies Numerical and statistical analysis on entered data
 
 You can use Varies Numerical methods to solve system of equation and to find roots of equation from below methods,
